@@ -1,4 +1,4 @@
-
+<?php echo $header; ?>
 <section class="module" >
     <div class="container">
       <div class="row module-heading">
@@ -27,6 +27,7 @@
         <?php $i = 1; ?>
         <?php foreach ($step_questions as $step) { ?>
           <div class="module-step quiz-metro-step" id="step_<?= $i; ?>" data-timeout="30">
+            
             <div class="module-question">
               <h4 class="module-question__title m-b-10"><?php echo $step['title']; ?></h4>
             </div>
@@ -70,6 +71,7 @@
                 </div><!-- /.module-comment__btn -->
               </div>
             </div>
+
           </div>
         <?php $i++; ?>
         <?php } ?>

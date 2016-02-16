@@ -57,4 +57,8 @@
 
 </head>
 <body class="bgm-white <?php echo $class; ?>">
+<div class="page-loader"><!-- preloader -->
+  <div class="page-loader loader">Loading...</div>
+</div><!-- /.preloader -->
+
 
