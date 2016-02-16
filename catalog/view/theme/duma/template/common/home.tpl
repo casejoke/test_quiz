@@ -1,224 +1,278 @@
 <?php echo $header; ?>
-<div class="module module-parallax" data-background="image/catalog/default/home-city.jpg">
-<!-- Facebook Conversion Code for Основные просмотры -->
-<script>(function() {
-var _fbq = window._fbq || (window._fbq = []);
-if (!_fbq.loaded) {
-var fbds = document.createElement('script');
-fbds.async = true;
-fbds.src = '//connect.facebook.net/en_US/fbds.js';
-var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(fbds, s);
-_fbq.loaded = true;
-}
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', '6036712128241', {'value':'0.00','currency':'USD'}]);
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6036712128241&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
-  <div class="container ">
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-7 ">
-        <div class="row">
-          <div class="intro-message">
-            <div class="intro-message_text">
-              <div class="intro-message_text-slogan">
-                <span class="intro-message_text-big">Твой город</span> твои правила
-              </div>
-              Оцени новое, предложи лучшее!
-            </div>
-
-            <a href="#list_of_ratings" class="section-scroll intro-message_arrow" onclick="yaCounter31626893.reachGoal('independent_rating'); return true;"><span>Независимый народный рейтинг</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-md-5 ">
-        <div class="col-xs-8 col-xs-offset-2 col-sm-12">
-          <div class="news-icon-wrap">
-            <div class="news-icon-circle animated infinite pulse"></div>
-            <a href="#" class="card card--news" data-toggle="modal" data-target="#myModal"></a>
-          </div>
-          <div class="message-btn-wrap">
-            <a href="/message_moroz" class="btn btn-block btn-border-red message-moroz">Письмо мэру Морозу</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<section class="module module--small quiz-list ">
-  <!-- MODULE TITLE -->
-  <div class="row">
-    <div class="col-sm-10 col-sm-offset-1 text-center">
-      <h2 class="module-title font-alt">Пройди тесты</h2>
-    </div>
-  </div>
-  <!-- /MODULE TITLE -->
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-        <div class="col-xs-12 col-sm-4 text-center quiz-item ">
-          <a href="/quiz_znatok_metro">
-            <div class="quiz-bg-blue ">
-              <span>Знаток метро?</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-xs-12 col-sm-4 text-center quiz-item ">
-          <a href="/quiz_city_battle">
-            <div class="quiz-bg-guan ">
-              <div class="one-vs-one"><b class="item-one">Москва</b> <i>VS.</i> <b class="item-two">Питер</b></div>
-            </div>
-          </a>
-        </div>
-        <div class="col-xs-12 col-sm-4 text-center quiz-item ">
-          <a href="/quiz_sravnenie_moscow">
-            <div class="quiz-bg-orange ">
-              <span>Впору ли обновки?</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-4 col-sm-offset-4 text-center">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 m-t-20">
-          <a href="/topresult" class="btn btn-border-d btn-block ">Больше тестов</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<div class="module module--small" id="list_of_ratings">
-  <div class="container ">
-    <!-- MODULE TITLE -->
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 text-center">
-        <h2 class="module-title font-alt">Москва за 5 лет: оцени изменения</h2>
-      </div>
-    </div>
-    <!-- /MODULE TITLE -->
-  </div>
-
-  <?php if(!empty($raitings)) { ?>
-    <?php $first = true; ?>
-    <?php foreach ($raitings as $raiting) { ?>
-      <!-- STANDARD PARALLAX -->
-      <div class="module module-small1 module-parallax bg-dark bg-dark-30" data-background="<?php echo $raiting['raiting_image']; ?>">
+ <section class="module" data-background="image/catalog/duma_bg.jpg">
         <div class="container">
-          <!-- MODULE TITLE -->
-          <div class="row">
-            <div class="col-sm-6 col-sm-offset-3 text-center">
-              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                <a href="<?php echo $raiting['raiting_href']; ?>" class="btn <?php echo ($first)?'btn-border-red':'btn-border-w'; ?> btn-block" onclick="yaCounter31626893.reachGoal('<?php echo $raiting['share_btn_ya']; ?> '); return true;"><?php echo $raiting['raiting_title']; ?></a>
-                <div class="sub-btn m-t-20"><?php echo $raiting['raiting_voice']; ?></div>
-              </div>
+            <div class="row border-row">
+               <div class="wrap-map-bg"></div>
+                <div class="col-xs-12 col-sm-12  col-md-12  col-lg-12  module__border ">
+                   
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-1 col-md-1 col-lg-1"><a href="/index.html"><img src="assets/images/logo.png" alt="Дума 2016" class="module__logo" ></a>
+                        </div>
+                        <div class=" col-xs-6 col-sm-5 col-sm-offset-4 col-md-5 col-md-offset-5 col-lg-4 col-lg-offset-6">
+                            <span class="module__top_text open-sans-exboltit">567 340 <span>горят сердцами</span>
+                            </span>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                            <div class="module__burger" id="my-button">
+                                <a href="#" ><img src="assets/images/burger_1.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center-block text-center col-xs-12">
+                            <h1 class="module__title open-sans-exboltit ">дамы и господа!</h1>
+                            <span class="module__subtitle open-sans-lite">скоро начнутся голодные игры в думу 2016</span>
+                            <br>
+                            <span class="module__subtitle-subtext open-sans-lite">Оцени самоотдачу и эффективность партий. <br> Что было сделано для народа, а что предстоит изменить?</span>
+                            <a class="bnt btn_rate open-sans-exbolt" href="/test3.html" >оценить</a>
+                        </div>
+                    </div>
+                    <div id="panema"></div>
+                    <div class="wrap-map-bg"></div>
+                    <div class="row" id="map-box">
+                       <div id="wrap-map">
+<!--                       <div id="wrap-map-bg"></div>-->
+                       <div id="left-map-box" class="col-xs-4 module__map_rel">
+                           
+                       
+                       
+
+                            <div class="module__map">
+                                
+                                <div class="module__tringl_kprf"><span class="open-sans-exboltit" id="party2"></span></div>
+                                <div class="module__tringl_ldpr"><span class="open-sans-exboltit" id="party3"></span></div>
+                                <div class="module__tringl_sprross"><span class="open-sans-exboltit" id="party1"></span></div>
+                                <div class="module__tringl_edros"><span class="open-sans-exboltit" id="party0"></span><span id="procent" class="text-right open-sans-regular"></span></div>
+                               <canvas id="canvas" width="362" height="434" ></canvas>
+                               <div id="message"></div>
+                                
+                            </div>
+                            
+                        
+                        
+                        </div>
+                        <div id="center-party-box" class="col-xs-4  col-md-3 col-lg-4">
+                        
+<!--                            <h4 class="module__title-party open-sans-exboltit">Единая россия</h4>-->
+                            <ul class="module__list_party open-sans-lite" id="party_list">
+                                <li>Антошкин Николай Тимофеевич</li>
+                                <li>Белых Ирина Викторовна</li>
+                                <li>Волков Данил Владимирович</li>
+                                <li>Выборный Анатолий Борисович</li>
+                                <li>Гончар Николай Николаевич</li>
+                                <li>Жарков Антон Викторович</li>
+                                <li>Железняк Сергей Владимирович</li>
+                                <li>Звагельский Виктор Фридрихович</li>
+                                <li>Исаев Андрей Константинович</li>
+                                <li>Кожевникова Мария Александровна</li>
+                                <li>Крупенников Владимир Александрович</li>
+                                <li>Кузин Сергей Павлович</li>
+                                <li>Никонов Вячеслав Алексеевич</li>
+                                <li>Панина Елена Владимировна</li>
+                                <li>Ресин Владимир Иосифович</li>
+                            </ul>
+                            <div class="btn-close"></div>
+                            <div id="btn-party" class="open-sans-exboltit">единая россия</div>
+                        </div>
+                        <div id="right-chang-box" class="col-xs-4 modile__rel">
+<!--                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 modile__rel hidden-xs hidden-sm">-->
+                           <div class="modile__infoDep-partyname open-sans-lite" id="select-name"></div>
+                            <div class="modile__infoDep">
+<!--                                <div class="module__infoDep-place"><span class="open-sans-lite">25</span></div>-->
+<!--                                <div class="module__infoDep-text"> - место в Рейтинге (из 450 депутатов)</div>-->
+                                    
+                                <img class="modile__infoDep-photo" id="people-photo" src="assets/images/face_kozevnikova.jpg" alt=""> 
+                                <div class="modile__infoDep-diline"></div>
+                                
+                                <div class="modile__infoDep-change">
+                                   <img class="modile__infoDep-photo" src="" alt="">    
+                                    <div class="modile__infoDep-line"></div>
+                                    <div class="modile__infoDep-yes open-sans-regular">да!</div>
+                                    <div class="modile__infoDep-like-but"></div>
+                                    <div class="modile__infoDep-no open-sans-lite">нет</div>
+                                    <div class="modile__infoDep-dislike-but"></div>
+                                </div>
+                                
+                                <div class="modile__infoDep-after">
+                                  <img class="modile__infoDep-photo" src="" alt="">   
+                                   <div class="module__infoDep-place-after"><span class="open-sans-lite">25</span></div>
+                                    <div class="modile__infoDep-line-after"></div>
+                                    <div class="modile__infoDep-bigline-after">66 000</div>
+                                    <div class="modile__infoDep-smline-after">55 000</div>
+                                    <div class="modile__infoDep-like-but-after-big"></div>
+                                    <div class="modile__infoDep-dislike-but-after-big"></div>
+                                    <div class="modile__infoDep-like-but-after-small"></div>
+                                    <div class="modile__infoDep-dislike-but-after-small"></div>
+                                    
+                                </div>
+                            </div>
+                            <div class="btn-back"></div>
+<!--                        </div>-->
+                        </div>
+                        
+                        </div>
+                    </div>
+                    <div class="menu " id="left-menu">
+                        <div class="menu__burger-close" id="btn_close"><img src="assets/images/burger_2.png" alt=""></div>
+                        <ul class="menu__nav">
+                            <li class="menu__nav-title open-sans-lite"><a href="/index.html">Главная</a></li>
+                            <li class="menu__nav-step  open-sans-regular">I Этап</li>
+                            <li class="menu__nav-title open-sans-lite"><a href="/test1.html">3наток думы</a></li>
+                            <li class="menu__nav-title open-sans-lite"><a href="/test2.html">Кресло депутата</a></li>
+                             <li class="menu__nav-title open-sans-lite"><a href="/test3.html">Рейтинг партий</a></li>
+                            <li class="menu__nav-heros open-sans-lite"><a href="#heros">Герои</a></li>
+                            <li class="menu__nav-step  menu__nav-stepfix open-sans-regular">II Этап</li>
+                            <li class="menu__nav-title menu__nav-titlefix open-sans-lite">подпишись чтобы выжить</li>
+                            <li class="input-group menu__nav-input">
+                                <input type="text" class="form-control">
+                                <div class="input-group-addon"><a href="#"><i class="fa fa-paper-plane-o"></i></a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
-          </div>
-          <!-- /MODULE TITLE -->
         </div>
-      </div>
-      <!-- /STANDARD PARALLAX -->
-      <?php $first = false; ?>
-    <?php } ?>
-  <?php } ?>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2 text-center">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 m-t-20">
-          <a href="/topresult" class="btn btn-border-d btn-block ">Итоги голосования первого этапа</a>
+    </section>
+    <section class="module">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
+                    <div class="module__test ">
+                       <img class="module__test-img" src="assets/images/know_test_no.jpg" alt="" id="test1_on">
+                        <img class="module__test-img display-none" src="assets/images/know_test_hover.jpg" alt="" id="test1_hov">
+                        <a class="module__test__btn bnt_test1 open-sans-lite" id="test1" href="/test1.html">Проверить себя</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
+                    <div class="module__test "><img class="module__test-img" src="assets/images/test_2.jpg" alt="" id="test2_on">
+                        <img class="module__test-img display-none" src="assets/images/test_2-hover.jpg" alt="" id="test2_hov">
+                        <div class="module__test__text open-sans-exboltit">не жестко ли кресло
+                            <br> <span class="open-sans-lite">депутата?</span></div>
+                        <a class="module__test__btn bnt_test2 open-sans-lite" href="/test2.html" id="test2">Присесть</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
+    <section class="module" data-background="assets/images/heros.jpg" id="heros">
+       <div class="container-fluid" id="heros-box">
+         <div id="heros-bg"></div>
+          <div class="center-block text-center gerb"><img src="assets/images/logo.png" alt="Дума 2016"></div>
+          <div class="row">
+                        <div class="col-xs-12  center-block module__title-infoperson open-sans-norm-it">
+                            <span class="module__title-line "></span>партия<span class="module__title-line"></span>
+                            </div>
+           </div>
+           <div id="wrap">
+               <div class="col-xs-6" id="left-box">
+<!--                 <div class="center-block text-center"><img src="assets/images/logo.png" alt="Дума 2016"></div>-->
+                  <div class="row">
+<!--
+                        <div class="col-xs-12  center-block module__title-infoperson open-sans-norm-it">
+                            <span class="module__title-line "></span>партия<span class="module__title-line"></span>
+                            </div>
+-->
+                        <div class="col-xs-12  center-block">
+                            <div class="module-title-big open-sans-exbolt text-center">Герои</div>
+                        </div>
+                         <div class="col-xs-12  center-block module__title-infoperson open-sans-norm-it">
+                            <span class="module__title-line"></span><span id="party-left"></span><span class="module__title-line"></span>
+                         </div>
 
+                         <div class="col-xs-12  center-block text-center">
+                            <div class="module__citata open-sans-norm-it col-md-4 col-md-offset-4" id="quote">
+                                «Очень важно, чтобы ценностные ориентиры, любовь к Родине, патриотизм формировались с детства и были неотъемлемой частью процесса воспитания и становления гражданина»
+                            </div>
+                        </div>
+                             <div class="col-xs-12  center-block text-center">
+                                <div class="module__citata-name open-sans-lite" id="left-name">Сергей Железняк</div>
+                                      </div>
 
-<!-- <div class="module module--quiz">
-  <div class="container bg-q">
-    <img src="image/catalog/bg-q.png">
-    <div class="row module-heading m-t-20">
-      <div class="col-sm-12">
-        <h1 class="module__heading__title  text-center font-alt m-b-0">Только работа, только хардкор!</h1>
-      </div>
-    </div>
-    <div class="row ">
-      <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 ">
-        <div class="row module-heading">
-          <h2 class="module__heading__subtitle  text-center font-alt m-b-0 m-t-10">Уже <span class="count">35 000 человек</span> дали наказ мэру!</h2>
-        </div>
-      </div>
-      <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 ">
-        <div class="row text-center">
-          <div class="col-xs-12">
-            <h4>Мэр!</h4>
-            <p >Хотим: круглосуточного общественного транспорта, как в Нью-Йорке, подземных парковок в центре, как в Барселоне, развитой инфраструктуры для инвалидов, как в Осло!</p>
-          </div>
+                     <div class="center-block text-center">
+                        <div class="icon-op fix-bnt-heros" id="left-btn"></div>
+                    </div>
 
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 text-center">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1 m-t-20">
-          <a href="/rating_nakaz_major" class="btn btn-blue btn-block ">Дать свой наказ</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
+                    </div>
+               </div>
+               
+               
+               
+               
+               <div class="col-xs-6 module" id="right-box" data-background="">
+<!--                  <div class="center-block text-center"><img src="assets/images/logo.png" alt="Дума 2016"></div>-->
+                  <div class="row">
+                
+                <div class="col-xs-12  center-block module__title-infoperson open-sans-norm-it" id="party-right">
+<!--                   <span class="module__title-line "></span>партия<span class="module__title-line"></span><br>-->
+                    единая россия</div>
+                <div class="col-xs-12 center-block">
+                    <div class="module__title-name open-sans-exbolt" id="right-name">Сергей Железняк</div>
+                </div>
+                <div class="col-xs-12  center-block module__title-infoperson open-sans-lite"><span class="module__title-line "></span><span id="birthday"> 30 июля 1970 г. (45 лет)</span> <span class="module__title-line"></span></div>
 
+                <div class="col-xs-6  col-sm-6 col-md-5 col-md-offset-1 col-lg-3 col-lg-offset-3">
+                    <div class="module__infoDep-place fix-place"><span class="open-sans-lite" id="rating">39</span>
+                    </div>
+                    <span class="module__place-text open-sans-exbolt"> место в рейтинге <br>
+                             <span class="open-sans-regular">(из 450 депутатов)</span>
+                    </span>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-5 col-lg-3 ">
+                    <div class="icon-lightning module__icon-skil"></div>
+                    <span class="module__place-text open-sans-exbolt"> особые навыки:<br>
+                             <span class="open-sans-regular" id="skils">сми держит в напряжении</span>
+                    </span>
+                </div>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title text-center" id="myModalLabel">Москва 5.0 News</h4>
-      </div>
-      <div class="modal-body text-center">
-        <p>Горожане, мы запустили новый этап голосования!</p>
-        <p>Поговорим про город.</p>
-        <br>
-        <p>Три новых теста:</p>
-        <p>
-          <b>«Знаток метро»</b><br>
-          Узнай все тайны подземки, как можно быстрей!
-        </p>
-        <p>
-          <b>«Впору ли обновки»</b><br>
-          Сравни прошлое с настоящим. Реши, нравится ли тебе, как меняется Москва!
-        </p>
-        <p>
-          <b>«Битва городов»</b><br>
-          Вечному спору между Москвой и Питером будет положен конец!
-        </p>
-        <br>
-        <p>А также рейтинги:</p>
-        <ul class="p-l-0 list-unstyled">
-          <li>Любимые места в городе</li>
-          <li>Городской транспорт</li>
-          <li>Деньги городу!</li>
-        </ul>
-        <p>Твой город – Твои правила!</p>
-        <p><a href="/topresult" class="btn btn-blue ">Жми на кнопки!</a></p>
-      </div>
-      <div class="modal-footer hidden">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+                <div class="col-xs-12 col-sm-12 col-md-12  col-lg-12  ">
+                    <div class="module__border-money">
+                        <div class="row">
+                            <div class="col-xs-6  col-sm-6 col-md-6  col-lg-6 border-money-left">
+                                <h5 class="module__title-infodep-money open-sans-norm-it text-right income"><li>доход</li></h5>
+                                <ul class="module__list-money open-sans-norm-it income-list text-right" id="list-profit">
+                                    <li><span class="year">2011</span> <span class="money">3 434 259 руб</span> </li>
+                                    <li class="fix-li"><span>2014</span> <span class="money">5 557 218 руб</span></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 border-money-right">
+                                <h5 class="module__title-infodep-money open-sans-norm-it text-left property"><li>собственость</li></h5>
+                                <ul class="module__list-money open-sans-norm-it property-list" id="list-capital">
+                                    <li><span>392,4 м<span><sup>2</sup></span></span>
+                                        <div class="icon-two-car"> </div>
+                                        <div class="icon-two-bike"></div>
+                                    </li>
+                                    <li class="fix-li"><span>392,4 м<span><sup>2</sup></span></span>
+                                        <div class="icon-two-bike"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-block text-center">
+                <div class="icon-cl fix-bnt-heros" id="right-btn"></div>
+            </div>
+                   
+               </div>
+           </div>
+           <div class="row">
+                        <div class="center-block text-center">
+                            <ul class="soc-link">
+                                <li><a href="#" class="fix-fs"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="fix-tw" ><i  class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="fix-vk"><i class="fa fa-vk"></i></a></li>
+                                <li><a href="#" class="fix-fs"><i class="fa fa-odnoklassniki"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+           
+           
+       </div>
+    </section>
 
 <?php echo $content_bottom; ?>
-</div>
-<!-- /WRAPPER -->
+
 <?php echo $footer; ?>

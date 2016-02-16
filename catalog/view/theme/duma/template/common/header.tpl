@@ -26,22 +26,21 @@
 <link rel="apple-touch-icon" sizes="114x114" href="catalog/assets/images/apple-touch-icon-114x114.png">
 
  <?php if($img_for_social){ ?>
+  <meta property="og:title" content="<?php echo $title; ?>" />
+  <meta property="og:description" content="<?php echo $description; ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<?php echo $img_for_social;?>" />
 
-<meta property="og:title" content="<?php echo $title; ?>" />
-<meta property="og:description" content="<?php echo $description; ?>" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="<?php echo $img_for_social;?>" />
-
-<meta name="mrc__share_title" content="<?php echo $title; ?>" />
-<meta name="mrc__share_description" content="<?php echo $description; ?>" />
-<link rel="image_src" href="<?php echo $img_for_social;?>" />
+  <meta name="mrc__share_title" content="<?php echo $title; ?>" />
+  <meta name="mrc__share_description" content="<?php echo $description; ?>" />
+  <link rel="image_src" href="<?php echo $img_for_social;?>" />
  <?php } ?>
 
   <?php foreach ($links as $link) { ?>
     <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
   <?php } ?>
   <!-- Template core CSS -->
-  <link href="catalog/assets/css/vote_moscow.min.css" rel="stylesheet">
+  <link href="catalog/view/theme/duma/assets/css/duma.min.css" rel="stylesheet">
   <?php foreach ($styles as $style) { ?>
     <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
   <?php } ?>
@@ -54,7 +53,7 @@
   </script>
 
   <?php echo $google_analytics; ?>
-
+  
 
 </head>
 <body class="bgm-white <?php echo $class; ?>">
