@@ -47,7 +47,7 @@
             </div>
           </div>
 
-          <div class="wizard-next ">
+          <div class="module module-wizard module-wizard--next ">
           <!-- пагинация  -->
           <div class="row">
             <div class="col-sm-12 text-center hidden-xs">

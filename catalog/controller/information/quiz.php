@@ -127,7 +127,7 @@ class ControllerInformationQuiz extends Controller {
 		}
 		$this->load->model('catalog/quiz');
 		$result_quiz =  $this->model_catalog_quiz->getMyStatsForQuiz($qshare_id);
-				/* временная заплатка */
+			
 				$quiz_id = $result_quiz['quiz_id'];
 			$data['result_share'] = $this->load->controller('quiz/quiz'.$quiz_id.'/result');
 

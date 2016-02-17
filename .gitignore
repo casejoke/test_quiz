@@ -6,7 +6,7 @@
 #template
 /source_admin_js_html_css
 /source_template_duma
-
+/share
 
 # System Cache Files
 /system/cache/*
